@@ -21,7 +21,7 @@ page.search('table.mcs').each do |t|
     record = {
       :council_reference => r.search('td')[0].inner_text.strip,
       :address => r.search('td')[1].inner_html.split('<br>')[0].strip,
-      :description => r.search('td')[2].inner_text,
+      :description => r.search('td')[3].inner_text,
       :date_scraped => Date.today.to_s,
       :info_url => url,
       :comment_url => 'mailto:council@muswellbrook.nsw.gov.au'
