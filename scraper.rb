@@ -31,7 +31,7 @@ page.search('table.mcs').each do |t|
       record["on_notice_to"] = Date.parse($~[1]).to_s
     end
 
-    if ScraperWiki.select("* from data where `council_reference`='#{record[:council_reference]}'").empty? 
+    if (ScraperWiki.select("* from data where `council_reference`='#{record[:council_reference]}'").empty? rescue true)
       ScraperWiki.save_sqlite([:council_reference], record)
     else
       puts "Skipping already saved record " + record[:council_reference]
