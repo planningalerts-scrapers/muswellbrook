@@ -2,6 +2,6 @@
 Bundler.require
 
 ATDISPlanningAlertsFeed.save(
-  "http://datracker.muswellbrook.nsw.gov.au/atdis/1.0",
+  "https://datracker.muswellbrook.nsw.gov.au/atdis/1.0",
   "Sydney"
 )
